@@ -31,6 +31,8 @@ jobs:
       run: |
         make test
     - name: Submit coverage
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
       run: |
         make submitcoverage
         make clean
