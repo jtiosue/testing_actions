@@ -1,5 +1,5 @@
 [run]
-include = package/*
+include = testing_actions/*
 branch = True
 
 [report]

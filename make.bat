@@ -1,6 +1,6 @@
 @ECHO off
 
-title package
+title testing_actions
 
 pushd %~dp0
 
@@ -9,7 +9,7 @@ if "%1" == "clean" (
 	rmdir /S /Q venv
 	rmdir /S /Q dist
 	rmdir /S /Q build
-	rmdir /S /Q package.egg-info
+	rmdir /S /Q testing_actions.egg-info
 ) else if "%1" == "deactivate" (
 	deactivate
 ) else if "%1" == "activate" (
@@ -40,7 +40,7 @@ if "%1" == "clean" (
 	&& echo cython_install succeeded
 ) else if "%1" == "test" (
 	venv\Scripts\activate ^
-	&& python -m pydocstyle convention=numpy package ^
+	&& python -m pydocstyle convention=numpy testing_actions ^
 	&& python -m pytest --codestyle --cov=./ ^
 	&& python setup.py sdist bdist_wheel ^
 	&& python -m twine check dist/* ^

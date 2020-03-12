@@ -5,7 +5,7 @@ clean:
 	rm -rf venv
 	rm -rf dist
 	rm -rf build
-	rm -rf package.egg-info
+	rm -rf testing_actions.egg-info
 
 install:
 	$(python_cmd) -m pip install virtualenv
@@ -28,7 +28,7 @@ cython_install:
 	. venv/bin/activate && pip install -e .
 
 test:
-	. venv/bin/activate && python -m pydocstyle convention=numpy package
+	. venv/bin/activate && python -m pydocstyle convention=numpy testing_actions
 	. venv/bin/activate && python -m pytest --codestyle --cov=./
 	. venv/bin/activate && python setup.py sdist bdist_wheel
 	. venv/bin/activate && python -m twine check dist/*

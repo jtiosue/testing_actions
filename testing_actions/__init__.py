@@ -1,4 +1,4 @@
-"""``package``.
+"""``testing_actions``.
 
 Description.
 
@@ -11,4 +11,4 @@ from ._py_func import py_func
 
 __all__ = 'c_func', 'py_func'
 
-name = "package"
+name = "testing_actions"

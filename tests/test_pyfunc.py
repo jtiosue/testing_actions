@@ -2,7 +2,7 @@
 
 """
 
-from package import py_func
+from testing_actions import py_func
 from numpy import allclose
 
 

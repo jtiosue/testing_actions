@@ -4,19 +4,19 @@
 {
     "distutils": {
         "depends": [
-            "package/src/c_extension.h"
+            "testing_actions/src/c_extension.h"
         ],
         "include_dirs": [
-            "./package/src/"
+            "./testing_actions/src/"
         ],
         "language": "c",
-        "name": "package._c_extension",
+        "name": "testing_actions._c_extension",
         "sources": [
-            "./package/_c_extension.pyx",
-            "./package/src/c_extension.c"
+            "./testing_actions/_c_extension.pyx",
+            "./testing_actions/src/c_extension.c"
         ]
     },
-    "module_name": "package._c_extension"
+    "module_name": "testing_actions._c_extension"
 }
 END: Cython Metadata */
 
@@ -610,8 +610,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__package___c_extension
-#define __PYX_HAVE_API__package___c_extension
+#define __PYX_HAVE__testing_actions___c_extension
+#define __PYX_HAVE_API__testing_actions___c_extension
 /* Early includes */
 #include <string.h>
 #include <stdlib.h>
@@ -824,7 +824,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "package/_c_extension.pyx",
+  "testing_actions/_c_extension.pyx",
 };
 /* NoFastGil.proto */
 #define __Pyx_PyGILState_Ensure PyGILState_Ensure
@@ -1033,12 +1033,12 @@ static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 /* Module declarations from 'libc.stdlib' */
 
-/* Module declarations from 'package._c_extension' */
-#define __Pyx_MODULE_NAME "package._c_extension"
-extern int __pyx_module_is_main_package___c_extension;
-int __pyx_module_is_main_package___c_extension = 0;
+/* Module declarations from 'testing_actions._c_extension' */
+#define __Pyx_MODULE_NAME "testing_actions._c_extension"
+extern int __pyx_module_is_main_testing_actions___c_extension;
+int __pyx_module_is_main_testing_actions___c_extension = 0;
 
-/* Implementation of 'package._c_extension' */
+/* Implementation of 'testing_actions._c_extension' */
 static const char __pyx_k_d[] = "d";
 static const char __pyx_k_x[] = "x";
 static const char __pyx_k_res[] = "res";
@@ -1047,24 +1047,24 @@ static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_c_func[] = "c_func";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
-static const char __pyx_k_package__c_extension[] = "package._c_extension";
-static const char __pyx_k_package__c_extension_pyx[] = "package/_c_extension.pyx";
+static const char __pyx_k_testing_actions__c_extension[] = "testing_actions._c_extension";
+static const char __pyx_k_testing_actions__c_extension_pyx[] = "testing_actions/_c_extension.pyx";
 static PyObject *__pyx_n_s_c_func;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_d;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_name;
-static PyObject *__pyx_n_s_package__c_extension;
-static PyObject *__pyx_kp_s_package__c_extension_pyx;
+static PyObject *__pyx_n_s_testing_actions__c_extension;
+static PyObject *__pyx_kp_s_testing_actions__c_extension_pyx;
 static PyObject *__pyx_n_s_res;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_x;
-static PyObject *__pyx_pf_7package_12_c_extension_c_func(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
+static PyObject *__pyx_pf_7testing_actions_12_c_extension_c_func(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
 static PyObject *__pyx_tuple_;
 static PyObject *__pyx_codeobj__2;
 /* Late includes */
 
-/* "package/_c_extension.pyx":13
+/* "testing_actions/_c_extension.pyx":13
  * 
  * 
  * def c_func(x):             # <<<<<<<<<<<<<<
@@ -1073,21 +1073,21 @@ static PyObject *__pyx_codeobj__2;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7package_12_c_extension_1c_func(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static char __pyx_doc_7package_12_c_extension_c_func[] = "c_func.\n\n    Return :math:`x^2`.\n\n    Parameters\n    ----------\n    x : numeric.\n\n    Returns\n    -------\n    res : numeric.\n\n    ";
-static PyMethodDef __pyx_mdef_7package_12_c_extension_1c_func = {"c_func", (PyCFunction)__pyx_pw_7package_12_c_extension_1c_func, METH_O, __pyx_doc_7package_12_c_extension_c_func};
-static PyObject *__pyx_pw_7package_12_c_extension_1c_func(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_7testing_actions_12_c_extension_1c_func(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static char __pyx_doc_7testing_actions_12_c_extension_c_func[] = "c_func.\n\n    Return :math:`x^2`.\n\n    Parameters\n    ----------\n    x : numeric.\n\n    Returns\n    -------\n    res : numeric.\n\n    ";
+static PyMethodDef __pyx_mdef_7testing_actions_12_c_extension_1c_func = {"c_func", (PyCFunction)__pyx_pw_7testing_actions_12_c_extension_1c_func, METH_O, __pyx_doc_7testing_actions_12_c_extension_c_func};
+static PyObject *__pyx_pw_7testing_actions_12_c_extension_1c_func(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("c_func (wrapper)", 0);
-  __pyx_r = __pyx_pf_7package_12_c_extension_c_func(__pyx_self, ((PyObject *)__pyx_v_x));
+  __pyx_r = __pyx_pf_7testing_actions_12_c_extension_c_func(__pyx_self, ((PyObject *)__pyx_v_x));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7package_12_c_extension_c_func(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pf_7testing_actions_12_c_extension_c_func(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_x) {
   double __pyx_v_d;
   double __pyx_v_res;
   PyObject *__pyx_r = NULL;
@@ -1096,7 +1096,7 @@ static PyObject *__pyx_pf_7package_12_c_extension_c_func(CYTHON_UNUSED PyObject 
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("c_func", 0);
 
-  /* "package/_c_extension.pyx":27
+  /* "testing_actions/_c_extension.pyx":27
  * 
  *     """
  *     cdef double d = x             # <<<<<<<<<<<<<<
@@ -1106,7 +1106,7 @@ static PyObject *__pyx_pf_7package_12_c_extension_c_func(CYTHON_UNUSED PyObject 
   __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_x); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 27, __pyx_L1_error)
   __pyx_v_d = __pyx_t_1;
 
-  /* "package/_c_extension.pyx":28
+  /* "testing_actions/_c_extension.pyx":28
  *     """
  *     cdef double d = x
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -1121,7 +1121,7 @@ static PyObject *__pyx_pf_7package_12_c_extension_c_func(CYTHON_UNUSED PyObject 
       #endif
       /*try:*/ {
 
-        /* "package/_c_extension.pyx":29
+        /* "testing_actions/_c_extension.pyx":29
  *     cdef double d = x
  *     with nogil:
  *         res = func(d)             # <<<<<<<<<<<<<<
@@ -1130,7 +1130,7 @@ static PyObject *__pyx_pf_7package_12_c_extension_c_func(CYTHON_UNUSED PyObject 
         __pyx_v_res = func(__pyx_v_d);
       }
 
-      /* "package/_c_extension.pyx":28
+      /* "testing_actions/_c_extension.pyx":28
  *     """
  *     cdef double d = x
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -1149,7 +1149,7 @@ static PyObject *__pyx_pf_7package_12_c_extension_c_func(CYTHON_UNUSED PyObject 
       }
   }
 
-  /* "package/_c_extension.pyx":30
+  /* "testing_actions/_c_extension.pyx":30
  *     with nogil:
  *         res = func(d)
  *     return res             # <<<<<<<<<<<<<<
@@ -1161,7 +1161,7 @@ static PyObject *__pyx_pf_7package_12_c_extension_c_func(CYTHON_UNUSED PyObject 
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "package/_c_extension.pyx":13
+  /* "testing_actions/_c_extension.pyx":13
  * 
  * 
  * def c_func(x):             # <<<<<<<<<<<<<<
@@ -1172,7 +1172,7 @@ static PyObject *__pyx_pf_7package_12_c_extension_c_func(CYTHON_UNUSED PyObject 
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("package._c_extension.c_func", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("testing_actions._c_extension.c_func", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1231,8 +1231,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_d, __pyx_k_d, sizeof(__pyx_k_d), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
-  {&__pyx_n_s_package__c_extension, __pyx_k_package__c_extension, sizeof(__pyx_k_package__c_extension), 0, 0, 1, 1},
-  {&__pyx_kp_s_package__c_extension_pyx, __pyx_k_package__c_extension_pyx, sizeof(__pyx_k_package__c_extension_pyx), 0, 0, 1, 0},
+  {&__pyx_n_s_testing_actions__c_extension, __pyx_k_testing_actions__c_extension, sizeof(__pyx_k_testing_actions__c_extension), 0, 0, 1, 1},
+  {&__pyx_kp_s_testing_actions__c_extension_pyx, __pyx_k_testing_actions__c_extension_pyx, sizeof(__pyx_k_testing_actions__c_extension_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_res, __pyx_k_res, sizeof(__pyx_k_res), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {&__pyx_n_s_x, __pyx_k_x, sizeof(__pyx_k_x), 0, 0, 1, 1},
@@ -1246,7 +1246,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "package/_c_extension.pyx":13
+  /* "testing_actions/_c_extension.pyx":13
  * 
  * 
  * def c_func(x):             # <<<<<<<<<<<<<<
@@ -1256,7 +1256,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple_ = PyTuple_Pack(3, __pyx_n_s_x, __pyx_n_s_d, __pyx_n_s_res); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
-  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_package__c_extension_pyx, __pyx_n_s_c_func, 13, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_testing_actions__c_extension_pyx, __pyx_n_s_c_func, 13, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -1414,7 +1414,7 @@ static CYTHON_SMALL_CODE PyObject* __pyx_pymod_create(PyObject *spec, CYTHON_UNU
     if (unlikely(!moddict)) goto bad;
     if (unlikely(__Pyx_copy_spec_to_module(spec, moddict, "loader", "__loader__", 1) < 0)) goto bad;
     if (unlikely(__Pyx_copy_spec_to_module(spec, moddict, "origin", "__file__", 1) < 0)) goto bad;
-    if (unlikely(__Pyx_copy_spec_to_module(spec, moddict, "parent", "__package__", 1) < 0)) goto bad;
+    if (unlikely(__Pyx_copy_spec_to_module(spec, moddict, "parent", "__testing_actions__", 1) < 0)) goto bad;
     if (unlikely(__Pyx_copy_spec_to_module(spec, moddict, "submodule_search_locations", "__path__", 0) < 0)) goto bad;
     return module;
 bad:
@@ -1504,14 +1504,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_package___c_extension) {
+  if (__pyx_module_is_main_testing_actions___c_extension) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "package._c_extension")) {
-      if (unlikely(PyDict_SetItemString(modules, "package._c_extension", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "testing_actions._c_extension")) {
+      if (unlikely(PyDict_SetItemString(modules, "testing_actions._c_extension", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -1532,19 +1532,19 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "package/_c_extension.pyx":13
+  /* "testing_actions/_c_extension.pyx":13
  * 
  * 
  * def c_func(x):             # <<<<<<<<<<<<<<
  *     """c_func.
  * 
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7package_12_c_extension_1c_func, NULL, __pyx_n_s_package__c_extension); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7testing_actions_12_c_extension_1c_func, NULL, __pyx_n_s_testing_actions__c_extension); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_c_func, __pyx_t_1) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "package/_c_extension.pyx":1
+  /* "testing_actions/_c_extension.pyx":1
  * # distutils: language=c             # <<<<<<<<<<<<<<
  * # cython: language_level=3
  * 
@@ -1561,11 +1561,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init package._c_extension", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init testing_actions._c_extension", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init package._c_extension");
+    PyErr_SetString(PyExc_ImportError, "init testing_actions._c_extension");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

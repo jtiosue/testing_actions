@@ -37,22 +37,22 @@ with open("requirements.txt") as f:
     REQUIREMENTS = [line.strip() for line in f if line.strip()]
 
 # get __version__, __author__, etc.
-with open("package/_version.py") as f:
+with open("testing_actions/_version.py") as f:
     exec(f.read())
 
 
 extensions = cythonize([
     setuptools.Extension(
-        name='package._c_extension',
-        sources=['./package/_c_extension' + ext,
-                 './package/src/c_extension.c'],
-        include_dirs=['./package/src/'],
+        name='testing_actions._c_extension',
+        sources=['./testing_actions/_c_extension' + ext,
+                 './testing_actions/src/c_extension.c'],
+        include_dirs=['./testing_actions/src/'],
         language='c'
     )
 ])
 
 setuptools.setup(
-    name="package",
+    name="testing_actions",
     version=__version__,
     author=__author__,
     author_email=__authoremail__,
@@ -61,13 +61,13 @@ setuptools.setup(
     long_description_content_type='text/x-rst',
     url=__sourceurl__,
     license=__license__,
-    packages=setuptools.find_packages(exclude=("tests", "docs")),
+    testing_actionss=setuptools.find_testing_actionss(exclude=("tests", "docs")),
     ext_modules=extensions,
     test_suite="tests",
     install_requires=REQUIREMENTS,
     zip_safe=False,
     cmdclass=dict(build_ext=build_ext),
-    include_package_data=True,
+    include_testing_actions_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: Apache Software License",
