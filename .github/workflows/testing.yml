@@ -1,13 +1,14 @@
-name: Testing-Windows
+name: Testing
 
 on: [push, pull_request]
 
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
         python-version: [3.6, 3.7, 3.8]
 
     steps:
@@ -18,10 +19,10 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        wmake cython_install
+        make cython_install
     - name: Test
       run: |
-        wmake test
+        make test
     - name: Submit coverage
       uses: codecov/codecov-action@v1
       with:
@@ -30,4 +31,4 @@ jobs:
         fail_ci_if_error: true
     - name: clean
       run: |
-        wmake clean
+        make clean
