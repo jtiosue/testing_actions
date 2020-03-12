@@ -37,9 +37,11 @@ submitcoverage:
 	. venv/bin/activate && python -m codecov
 
 upload_pypi_test:
+	. venv/bin/activate && python setup.py sdist bdist_wheel
 	. venv/bin/activate && twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
 upload_pypi:
+	. venv/bin/activate && python setup.py sdist bdist_wheel
 	. venv/bin/activate && twine upload dist/*
 
 upload_manylinux_pypi_test:

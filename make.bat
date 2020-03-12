@@ -50,9 +50,13 @@ if "%1" == "clean" (
 	&& python -m codecov ^
 	&& echo coverage submitted
 ) else if "%1" == "upload_pypi_test" (
-    venv\Scripts\activate && twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+    venv\Scripts\activate ^
+    && python setup.py sdist bdist_wheel ^
+    && twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 ) else if "%1" == "upload_pypi" (
-    venv\Scripts\activate && twine upload dist/*
+    venv\Scripts\activate ^
+    && python setup.py sdist bdist_wheel ^
+    && twine upload dist/*
 ) else (
 	echo Invalid option; must be either clean, dev_install, cython_install,
 	echo install, test, submitcoverage, deactivate, activate,
