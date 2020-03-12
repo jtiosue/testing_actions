@@ -1,7 +1,7 @@
 python_cmd := python
 
 clean:
-	pip uninstall .
+	pip uninstall testing_actions
 	rm -rf dist
 	rm -rf build
 	rm -rf testing_actions.egg-info
