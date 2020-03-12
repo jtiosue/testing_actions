@@ -27,3 +27,8 @@ Testing CI with GitHub Actions
 .. image:: https://codecov.io/gh/jiosue/testing_actions/branch/dev/graph/badge.svg
     :target: https://codecov.io/gh/jiosue/testing_actions
     :alt: Code Coverage
+
+
+Continuous Integration and Publishing to (Testing) PyPi with Github Actions.
+
+Testing PyPi Page: https://test.pypi.org/project/testing-actions/.
