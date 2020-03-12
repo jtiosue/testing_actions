@@ -29,7 +29,7 @@ cython_install:
 
 test:
 	. venv/bin/activate && python -m pydocstyle convention=numpy testing_actions
-	. venv/bin/activate && python -m pytest --codestyle --cov=./
+	. venv/bin/activate && python -m pytest --codestyle --cov=./ --cov-report=xml
 	. venv/bin/activate && python setup.py sdist bdist_wheel
 	. venv/bin/activate && python -m twine check dist/*
 

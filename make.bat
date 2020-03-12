@@ -41,7 +41,7 @@ if "%1" == "clean" (
 ) else if "%1" == "test" (
 	venv\Scripts\activate ^
 	&& python -m pydocstyle convention=numpy testing_actions ^
-	&& python -m pytest --codestyle --cov=./ ^
+	&& python -m pytest --codestyle --cov=./ --cov-report=xml ^
 	&& python setup.py sdist bdist_wheel ^
 	&& python -m twine check dist/* ^
 	&& echo tests succeeded
