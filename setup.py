@@ -61,7 +61,7 @@ setuptools.setup(
     long_description_content_type='text/x-rst',
     url=__sourceurl__,
     license=__license__,
-    testing_actionss=setuptools.find_testing_actionss(exclude=("tests", "docs")),
+    packages=setuptools.find_packages(exclude=("tests", "docs")),
     ext_modules=extensions,
     test_suite="tests",
     install_requires=REQUIREMENTS,
