@@ -45,14 +45,20 @@ if "%1" == "clean" (
 	&& python setup.py sdist bdist_wheel ^
 	&& python -m twine check dist/* ^
 	&& echo tests succeeded
-) else if "%1" == submitcoverage (
+) else if "%1" == "submitcoverage" (
 	venv\Scripts\activate ^
 	&& python -m codecov ^
 	&& echo coverage submitted
+) else if "%1" == "upload_pypi_test" (
+    python setup.py sdist bdist_wheel ^
+    && twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+) else if "%1" == "upload_pypi" (
+    python setup.py sdist bdist_wheel ^
+    && twine upload dist/*
 ) else (
 	echo Invalid option; must be either clean, dev_install, cython_install,
-	echo install, test, submitcoverage, deactivate, or activate
+	echo install, test, submitcoverage, deactivate, activate,
+	echo upload_pypi_test, or upload_pypi
 )
 
 popd
-s
