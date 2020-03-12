@@ -6,7 +6,7 @@ __all__ = (
 )
 
 
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 __author__ = "Joseph T. Iosue"
 __authoremail__ = "joe.iosue@yahoo.com"
 __license__ = "MIT License"
