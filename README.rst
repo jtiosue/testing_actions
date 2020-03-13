@@ -1,7 +1,7 @@
 Testing GitHub Actions CI
 =========================
 
-Testing CI with GitHub Actions
+Testing CI and PyPI deployment with GitHub Actions for a Python Package with C Extensions.
 
 *master branch*
 
@@ -23,6 +23,4 @@ Testing CI with GitHub Actions
     :alt: Code Coverage
 
 
-Continuous Integration and Publishing to (Testing) PyPi with Github Actions.
-
-Testing PyPi Page: https://test.pypi.org/project/testing-actions/.
+Continuous Integration and Publishing to (Testing) PyPI with Github Actions. Everytime we push or pull request, the testing actions will be run. Everytime we release, the deploying actions will be run. The package is deployed to the Testing PyPI page, https://test.pypi.org/project/testing-actions/.
