@@ -1,5 +1,3 @@
-# https://github.com/RalfG/python-wheels-manylinux-build/blob/master/full_workflow_example.yml
-
 name: Upload Python Package - Many Linux
 
 on:
