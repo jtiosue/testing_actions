@@ -29,12 +29,20 @@ test:
 submitcoverage:
 	python -m codecov
 
-upload_pypi_test:
-	python setup.py sdist bdist_wheel
+upload_wheel_pypi_test:
+	python setup.py bdist_wheel
 	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
-upload_pypi:
-	python setup.py sdist bdist_wheel
+upload_wheel_pypi:
+	python setup.py bdist_wheel
+	twine upload dist/*
+
+upload_source_pypi_test:
+	python setup.py sdist
+	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+
+upload_source_pypi:
+	python setup.py sdist
 	twine upload dist/*
 
 upload_manylinux_pypi_test:
