@@ -1,9 +1,6 @@
 # distutils: language=c
 # cython: language_level=3
 
-from libc.stdlib cimport malloc, free
-
-
 cdef extern from "c_extension.h":
     double func(
         double x
