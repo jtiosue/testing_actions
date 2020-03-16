@@ -13,7 +13,7 @@ Testing CI and PyPI deployment with GitHub Actions for a Python Package with C E
     :alt: Code Coverage
     
     
-*dev branch*
+*dev branch* (doesn't use Cython)
 
 .. image:: https://github.com/jiosue/testing_actions/workflows/Testing/badge.svg?branch=dev
     :target: https://github.com/jiosue/testing_actions/actions/
