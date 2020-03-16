@@ -22,13 +22,6 @@ installing by source.
 import setuptools
 from setuptools.command.build_ext import build_ext
 
-try:
-    from Cython.Build import cythonize
-    USE_CYTHON, ext = True, '.pyx'
-except ImportError:
-    def cythonize(e): return e
-    USE_CYTHON, ext = False, '.c'
-
 
 with open('README.rst') as f:
     README = f.read()
@@ -41,15 +34,15 @@ with open("testing_actions/_version.py") as f:
     exec(f.read())
 
 
-extensions = cythonize([
+extensions = [
     setuptools.Extension(
         name='testing_actions._c_extension',
-        sources=['./testing_actions/_c_extension' + ext,
+        sources=['./testing_actions/_c_extension.c',
                  './testing_actions/src/c_extension.c'],
         include_dirs=['./testing_actions/src/'],
         language='c'
     )
-])
+]
 
 setuptools.setup(
     name="testing_actions",

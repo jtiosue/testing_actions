@@ -15,11 +15,6 @@ dev_install:
 	pip install -e .
 	pip install -r requirements-dev.txt
 
-cython_install:
-	pip install --upgrade pip
-	pip install -r requirements-dev.txt
-	pip install -e .
-
 test:
 	python -m pydocstyle convention=numpy testing_actions
 	python -m pytest --codestyle --cov=./ --cov-report=xml
