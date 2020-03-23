@@ -60,7 +60,7 @@ setuptools.setup(
     install_requires=REQUIREMENTS,
     zip_safe=False,
     cmdclass=dict(build_ext=build_ext),
-    include_testing_actions_data=True,
+    include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: Apache Software License",
