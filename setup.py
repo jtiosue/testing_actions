@@ -12,6 +12,14 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
+
+"""setup.py.
+
+Set up details for ``pip install testing_actions`` or ``pip install -e .`` if
+installing by source.
+
+"""
+
 import setuptools
 from setuptools.command.build_ext import build_ext
 
