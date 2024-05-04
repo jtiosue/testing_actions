@@ -12,6 +12,7 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
+
 """setup.py.
 
 Set up details for ``pip install testing_actions`` or ``pip install -e .`` if
@@ -22,15 +23,8 @@ installing by source.
 import setuptools
 from setuptools.command.build_ext import build_ext
 
-try:
-    from Cython.Build import cythonize
-    USE_CYTHON, ext = True, '.pyx'
-except ImportError:
-    def cythonize(e): return e
-    USE_CYTHON, ext = False, '.c'
 
-
-with open('README.rst') as f:
+with open("README.rst") as f:
     README = f.read()
 
 with open("requirements.txt") as f:
@@ -41,15 +35,17 @@ with open("testing_actions/_version.py") as f:
     exec(f.read())
 
 
-extensions = cythonize([
+extensions = [
     setuptools.Extension(
-        name='testing_actions._c_extension',
-        sources=['./testing_actions/_c_extension' + ext,
-                 './testing_actions/src/c_extension.c'],
-        include_dirs=['./testing_actions/src/'],
-        language='c'
+        name="testing_actions._c_extension",
+        sources=[
+            "./testing_actions/_c_extension.c",
+            "./testing_actions/src/c_extension.c",
+        ],
+        include_dirs=["./testing_actions/src/"],
+        language="c",
     )
-])
+]
 
 setuptools.setup(
     name="testing_actions",
@@ -58,7 +54,7 @@ setuptools.setup(
     author_email=__authoremail__,
     description=__description__,
     long_description=README,
-    long_description_content_type='text/x-rst',
+    long_description_content_type="text/x-rst",
     url=__sourceurl__,
     license=__license__,
     packages=setuptools.find_packages(exclude=("tests", "docs")),
@@ -73,7 +69,5 @@ setuptools.setup(
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
     ],
-    project_urls={
-        "Source": __sourceurl__
-    }
+    project_urls={"Source": __sourceurl__},
 )

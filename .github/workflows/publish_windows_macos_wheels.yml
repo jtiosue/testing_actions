@@ -11,20 +11,18 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest, macos-latest]
-        python-version: [3.7, 3.8, 3.9]
+        python-version: [3.9]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v1
+    - uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
-      run: |
-        make cython_install
+      run: make dev_install
     - name: Build and publish
       env:
         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-      run: |
-        make upload_wheel_pypi_test
+      run: make upload_wheel_pypi_test

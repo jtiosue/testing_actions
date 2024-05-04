@@ -1,3 +1,2 @@
 include README.rst LICENSE requirements.txt
-recursive-include testing_actions/src *.h *.c
-recursive-include testing_actions *.pyx *.c
+recursive-include testing_actions *.h *.c

@@ -1,8 +1,12 @@
 """Defines the version number and details of testing_actions."""
 
 __all__ = (
-    '__version__', '__author__', '__authoremail__', '__license__',
-    '__sourceurl__', '__description__'
+    "__version__",
+    "__author__",
+    "__authoremail__",
+    "__license__",
+    "__sourceurl__",
+    "__description__",
 )
 
 

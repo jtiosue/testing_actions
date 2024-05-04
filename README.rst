@@ -6,7 +6,7 @@ Testing CI and PyPI deployment with GitHub Actions for a Python Package with C E
 *master branch*
 
 .. image:: https://github.com/jiosue/testing_actions/workflows/Testing/badge.svg?branch=master
-    :target: https://github.com/jiosue/testing_actions/actions/
+    :target: https://github.com/jiosue/testing_actions/actions?query=workflow%3ATesting+branch%3Amaster
     :alt: GitHub Actions CI
 .. image:: https://codecov.io/gh/jiosue/testing_actions/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/jiosue/testing_actions
@@ -16,7 +16,7 @@ Testing CI and PyPI deployment with GitHub Actions for a Python Package with C E
 *dev branch* (doesn't use Cython)
 
 .. image:: https://github.com/jiosue/testing_actions/workflows/Testing/badge.svg?branch=dev
-    :target: https://github.com/jiosue/testing_actions/actions/
+    :target: https://github.com/jiosue/testing_actions/actions?query=workflow%3ATesting+branch%3Adev
     :alt: GitHub Actions CI
 .. image:: https://codecov.io/gh/jiosue/testing_actions/branch/dev/graph/badge.svg
     :target: https://codecov.io/gh/jiosue/testing_actions
