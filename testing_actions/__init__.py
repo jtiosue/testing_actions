@@ -4,6 +4,8 @@ Description.
 
 """
 
+from ._version import *
+
 from ._c_extension import c_func
 from ._py_func import py_func
 

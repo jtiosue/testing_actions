@@ -4,23 +4,3 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
 packages = ["testing_actions"]
-
-[project]
-name = "testing_actions"
-authors = [
-    {name = "Joseph T. Iosue", email = "jtiosue@gmail.com"},
-]
-description = "Testing CI with GitHub Actions"
-readme = "README.rst"
-requires-python = ">=3.8"
-license = {text = "Apache Software License 2.0"}
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: Apache Software License",
-    "Operating System :: OS Independent",
-]
-dependencies = ["numpy"]
-version = "1.0.1"
-
-[project.urls]
-"Source" = "https://github.com/jtiosue/testing_actions"
