@@ -18,26 +18,26 @@ dev_install:
 test:
 	python -m pydocstyle convention=numpy testing_actions
 	python -m pytest --codestyle --cov=./ --cov-report=xml
-	python setup.py sdist bdist_wheel
+	python -m build
 	python -m twine check dist/*
 
 submitcoverage:
 	python -m codecov
 
 upload_wheel_pypi_test:
-	python setup.py bdist_wheel
+	python -m build
 	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
 upload_wheel_pypi:
-	python setup.py bdist_wheel
+	python -m build
 	twine upload dist/*
 
 upload_source_pypi_test:
-	python setup.py sdist
+	python -m build
 	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
 upload_source_pypi:
-	python setup.py sdist
+	python -m build
 	twine upload dist/*
 
 upload_manylinux_pypi_test:

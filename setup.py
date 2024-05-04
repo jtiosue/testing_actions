@@ -14,59 +14,22 @@
 
 """setup.py.
 
-Set up details for ``pip install testing_actions`` or ``pip install -e .`` if
-installing by source.
-
 """
 
-import setuptools
-from setuptools.command.build_ext import build_ext
 
-
-with open('README.rst') as f:
-    README = f.read()
-
-with open("requirements.txt") as f:
-    REQUIREMENTS = [line.strip() for line in f if line.strip()]
-
-# get __version__, __author__, etc.
-with open("testing_actions/_version.py") as f:
-    exec(f.read())
-
+from setuptools import setup, Extension
 
 extensions = [
-    setuptools.Extension(
-        name='testing_actions._c_extension',
-        sources=['./testing_actions/_c_extension.c',
-                 './testing_actions/src/c_extension.c'],
-        include_dirs=['./testing_actions/src/'],
-        language='c'
+    Extension(
+        name="testing_actions._c_extension",
+        sources=[
+            "./testing_actions/_c_extension.c",
+            "./testing_actions/src/c_extension.c",
+        ],
+        include_dirs=["./testing_actions/src/"],
+        language="c",
+        py_limited_api=True,
     )
 ]
 
-setuptools.setup(
-    name="testing_actions",
-    version=__version__,
-    author=__author__,
-    author_email=__authoremail__,
-    description=__description__,
-    long_description=README,
-    long_description_content_type='text/x-rst',
-    url=__sourceurl__,
-    license=__license__,
-    packages=setuptools.find_packages(exclude=("tests", "docs")),
-    ext_modules=extensions,
-    test_suite="tests",
-    install_requires=REQUIREMENTS,
-    zip_safe=False,
-    cmdclass=dict(build_ext=build_ext),
-    include_package_data=True,
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: Apache Software License",
-        "Operating System :: OS Independent",
-    ],
-    project_urls={
-        "Source": __sourceurl__
-    }
-)
+setup(ext_modules=extensions)
