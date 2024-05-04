@@ -26,22 +26,22 @@ submitcoverage:
 
 upload_wheel_pypi_test:
 	python -m build
-	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+	python -m twine upload --repository testpypi dist/*
 
 upload_wheel_pypi:
 	python -m build
-	twine upload dist/*
+	python -m twine upload dist/*
 
 upload_source_pypi_test:
 	python -m build
-	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+	python -m twine upload --repository testpypi dist/*
 
 upload_source_pypi:
 	python -m build
-	twine upload dist/*
+	python -m twine upload dist/*
 
 upload_manylinux_pypi_test:
-	twine upload --repository-url https://test.pypi.org/legacy/ wheelhouse/*-manylinux*.whl
+	python -m twine upload --repository testpypi wheelhouse/*-manylinux*.whl
 
 upload_manylinux_pypi:
-	twine upload wheelhouse/*-manylinux*.whl
+	python -m twine upload wheelhouse/*-manylinux*.whl
